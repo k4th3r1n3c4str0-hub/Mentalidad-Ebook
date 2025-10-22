@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentalidad Transformadora - Descarga Gratuita</title>
+    <style>
+        /* Tipografía y Estilos Generales */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Encabezado y Titulares */
+        header {
+            background-color: #007bff; /* Azul profesional */
+            color: white;
+            padding: 40px 20px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            color: #ffc107; /* Dorado llamativo */
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* Sección de Problema y Solución */
+        .section {
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .problem-list li {
+            margin-bottom: 10px;
+            color: #dc3545; /* Rojo de "alerta" */
+            font-weight: 500;
+        }
+        .problem-list li::before {
+            content: "❌";
+            margin-right: 10px;
+        }
+
+        /* Sección de Valor y Contenido */
+        .value-prop {
+            background-color: #e9ecef;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+        .value-prop h3 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .key-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+        @media (min-width: 600px) {
+            .key-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .feature-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 5px solid #ffc107;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card strong {
+            display: block;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        /* Formulario de Captura (CTA) */
+        .cta-section {
+            background-color: #28a745; /* Verde de Acción */
+            color: white;
+            padding: 40px 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        .cta-section h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .form-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        .form-box input[type="text"], 
+        .form-box input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box; /* Asegura que el padding no cambie el ancho total */
+        }
+        .cta-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffc107; /* Dorado llamativo */
+            color: #343a40;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e0a800;
+        }
+
+        /* Footer y Notas de Confianza */
+        footer {
+            padding: 20px 0;
+            font-size: 0.8em;
+            color: #6c757d;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <p style="margin-bottom: 5px;">¡ATENCIÓN, EMPRENDEDOR/A Y CREADOR/A!</p>
+    <h1 style="color: #ffc107;">MENTALIDAD TRANSFORMADORA</h1>
+    <h2>[Descarga Gratis] Reprograma tus Creencias Limitantes y Despierta tu Éxito</h2>
+    <p>Por Katherine Castro</p>
+    <p style="font-style: italic;">(Valorado en $27, HOY GRATIS por tiempo limitado)</p>
+</header>
+
+<div class="container">
+    
+    <div class="section">
+        <h3 class="subtitle">El Freno Invisible Ha Terminado.</h3>
+        <p style="font-size: 1.2em; max-width: 600px; margin: 0 auto 20px;">
+            **¿Te sientes estancado/a a pesar de tu esfuerzo?** El obstáculo no está afuera, está en el software mental que te sabotea.
+        </p>
+        <ul class="problem-list">
+            <li>¿Sueñas en grande, pero una voz interna te dice que "no eres suficiente"?</li>
+            <li>¿Te autosaboteas justo cuando estás a punto de alcanzar una meta importante?</li>
+            <li>¿La frustración y la indisciplina te impiden ser consistente?</li>
+        </ul>
+        <p style="font-weight: 700; color: #dc3545; margin-top: 25px;">
+            ¡Es hora de actualizar tu sistema operativo mental!
+        </p>
+    </div>
+
+    <div class="value-prop">
+        <h3>Dentro de este eBook de Alto Valor Descubrirás:</h3>
+        <div class="key-features">
+            <div class="feature-card">
+                <strong>🧠 El Diagnóstico Mental:</strong> A identificar las 5 creencias limitantes que te están costando dinero y energía.
+            </div>
+            <div class="feature-card">
+                <strong>✂️ Reprogramación Neuronal:</strong> La técnica del "Aún No..." para anular pensamientos negativos y activar la plasticidad de tu cerebro.
+            </div>
+            <div class="feature-card">
+                <strong>🥋 Disciplina Emocional:</strong> Tres hábitos de Mindfulness para manejar el miedo al rechazo y la frustración con calma.
+            </div>
+            <div class="feature-card">
+                <strong>🚀 Hábitos de Éxito:</strong> Cómo aplicar la fórmula Señal-Rutina-Recompensa para automatizar la consistencia en menos de 21 días.
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h3>🔥 TU TRANSFORMACIÓN COMIENZA AHORA 🔥</h3>
+        <p style="font-size: 1.3em; font-weight: 500;">
+            Pasa del **Punto A** (estancamiento) al **Punto B** (éxito y paz mental).
+        </p>
+        <div class="form-box">
+            <form action="[AQUÍ VA EL LINK DE TU SERVICIO DE EMAIL MARKETING]" method="POST">
+                <input type="text" name="name" placeholder="Tu Nombre:" required>
+                <input type="email" name="email" placeholder="Tu Mejor Email:" required>
+                <button type="submit" class="cta-button">¡DESCARGAR MI MENTALIDAD TRANSFORMADORA AHORA!</button>
+            </form>
+            <p style="color: #6c757d; font-size: 0.9em; margin-top: 15px;">
+                *Cero spam. Solo valor. Descarga inmediata garantizada.*
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Mentalidad Transformadora. Todos los derechos reservados.</p>
+        <p>Por Katherine Castro. <a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
