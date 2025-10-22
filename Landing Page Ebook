@@ -1,241 +1,621 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentalidad Transformadora - Descarga Gratuita</title>
+    <title>Regalos Especiales - Encuentra el Regalo Perfecto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Tipografía y Estilos Generales */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        :root {
+            --primary: #6C63FF;
+            --secondary: #4CAF50;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --accent: #FF6B6B;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
             line-height: 1.6;
+            color: #333;
+            background-color: #fff;
         }
+
         .container {
-            max-width: 800px;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            text-align: center;
+            padding: 0 15px;
         }
-        
-        /* Encabezado y Titulares */
+
+        /* Header */
         header {
-            background-color: #007bff; /* Azul profesional */
-            color: white;
-            padding: 40px 20px;
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-            line-height: 1.1;
-        }
-        h2 {
-            font-size: 1.2em;
-            font-weight: 400;
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-        .subtitle {
-            font-size: 1.5em;
-            color: #ffc107; /* Dorado llamativo */
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        /* Sección de Problema y Solución */
-        .section {
-            padding: 30px 0;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        .problem-list {
-            list-style: none;
-            padding: 0;
-            max-width: 500px;
-            margin: 20px auto;
-            text-align: left;
-        }
-        .problem-list li {
-            margin-bottom: 10px;
-            color: #dc3545; /* Rojo de "alerta" */
-            font-weight: 500;
-        }
-        .problem-list li::before {
-            content: "❌";
-            margin-right: 10px;
-        }
-
-        /* Sección de Valor y Contenido */
-        .value-prop {
-            background-color: #e9ecef;
-            padding: 40px 20px;
-            border-radius: 8px;
-        }
-        .value-prop h3 {
-            color: #007bff;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .key-features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            text-align: left;
-        }
-        @media (min-width: 600px) {
-            .key-features {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        .feature-card {
-            background-color: white;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 5px solid #ffc107;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-        }
-        .feature-card strong {
-            display: block;
-            color: #007bff;
-            margin-bottom: 5px;
-        }
-
-        /* Formulario de Captura (CTA) */
-        .cta-section {
-            background-color: #28a745; /* Verde de Acción */
-            color: white;
-            padding: 40px 20px;
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-        .cta-section h3 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .form-box {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            max-width: 400px;
-            margin: 20px auto;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-        .form-box input[type="text"], 
-        .form-box input[type="email"] {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
             width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            box-sizing: border-box; /* Asegura que el padding no cambie el ancho total */
-        }
-        .cta-button {
-            width: 100%;
-            padding: 15px;
-            background-color: #ffc107; /* Dorado llamativo */
-            color: #343a40;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #e0a800;
+            top: 0;
+            z-index: 1000;
         }
 
-        /* Footer y Notas de Confianza */
-        footer {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px 0;
-            font-size: 0.8em;
-            color: #6c757d;
         }
-        footer a {
-            color: #007bff;
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
             text-decoration: none;
         }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Features */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        .author-info p {
+            margin: 5px 0 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #6C63FF 0%, #4A3FCF 100%);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cta-button.secondary {
+            background: white;
+            color: var(--primary);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+        }
+
+        .cta-button.secondary:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .features-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">RegalosEspeciales</a>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" class="cta-button">Ver Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <p style="margin-bottom: 5px;">¡ATENCIÓN, EMPRENDEDOR/A Y CREADOR/A!</p>
-    <h1 style="color: #ffc107;">MENTALIDAD TRANSFORMADORA</h1>
-    <h2>[Descarga Gratis] Reprograma tus Creencias Limitantes y Despierta tu Éxito</h2>
-    <p>Por Katherine Castro</p>
-    <p style="font-style: italic;">(Valorado en $27, HOY GRATIS por tiempo limitado)</p>
-</header>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1 class="fade-in-up">Encuentra el Regalo Perfecto</h1>
+            <p class="fade-in-up delay-1">Sorprende a tus seres queridos con regalos únicos y personalizados que nunca olvidarán.</p>
+            <a href="#catalogo" class="cta-button fade-in-up delay-2">Explorar Ahora</a>
+        </div>
+    </section>
 
-<div class="container">
-    
-    <div class="section">
-        <h3 class="subtitle">El Freno Invisible Ha Terminado.</h3>
-        <p style="font-size: 1.2em; max-width: 600px; margin: 0 auto 20px;">
-            **¿Te sientes estancado/a a pesar de tu esfuerzo?** El obstáculo no está afuera, está en el software mental que te sabotea.
-        </p>
-        <ul class="problem-list">
-            <li>¿Sueñas en grande, pero una voz interna te dice que "no eres suficiente"?</li>
-            <li>¿Te autosaboteas justo cuando estás a punto de alcanzar una meta importante?</li>
-            <li>¿La frustración y la indisciplina te impiden ser consistente?</li>
-        </ul>
-        <p style="font-weight: 700; color: #dc3545; margin-top: 25px;">
-            ¡Es hora de actualizar tu sistema operativo mental!
-        </p>
-    </div>
-
-    <div class="value-prop">
-        <h3>Dentro de este eBook de Alto Valor Descubrirás:</h3>
-        <div class="key-features">
-            <div class="feature-card">
-                <strong>🧠 El Diagnóstico Mental:</strong> A identificar las 5 creencias limitantes que te están costando dinero y energía.
+    <!-- Features Section -->
+    <section class="features" id="como-funciona">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>Ofrecemos la mejor selección de regalos para todas las ocasiones</p>
             </div>
-            <div class="feature-card">
-                <strong>✂️ Reprogramación Neuronal:</strong> La técnica del "Aún No..." para anular pensamientos negativos y activar la plasticidad de tu cerebro.
-            </div>
-            <div class="feature-card">
-                <strong>🥋 Disciplina Emocional:</strong> Tres hábitos de Mindfulness para manejar el miedo al rechazo y la frustración con calma.
-            </div>
-            <div class="feature-card">
-                <strong>🚀 Hábitos de Éxito:</strong> Cómo aplicar la fórmula Señal-Rutina-Recompensa para automatizar la consistencia en menos de 21 días.
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Regalos Únicos</h3>
+                    <p>Selección cuidadosa de regalos originales que no encontrarás en cualquier tienda.</p>
+                </div>
+                <div class="feature-card fade-in-up delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Envío Rápido</h3>
+                    <p>Envío rápido y seguro a todo el país. ¡Recibe tu pedido en tiempo récord!</p>
+                </div>
+                <div class="feature-card fade-in-up delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Hecho con Amor</h3>
+                    <p>Cada regalo es preparado con dedicación y atención a los detalles.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="cta-section">
-        <h3>🔥 TU TRANSFORMACIÓN COMIENZA AHORA 🔥</h3>
-        <p style="font-size: 1.3em; font-weight: 500;">
-            Pasa del **Punto A** (estancamiento) al **Punto B** (éxito y paz mental).
-        </p>
-        <div class="form-box">
-            <form action="[AQUÍ VA EL LINK DE TU SERVICIO DE EMAIL MARKETING]" method="POST">
-                <input type="text" name="name" placeholder="Tu Nombre:" required>
-                <input type="email" name="email" placeholder="Tu Mejor Email:" required>
-                <button type="submit" class="cta-button">¡DESCARGAR MI MENTALIDAD TRANSFORMADORA AHORA!</button>
-            </form>
-            <p style="color: #6c757d; font-size: 0.9em; margin-top: 15px;">
-                *Cero spam. Solo valor. Descarga inmediata garantizada.*
-            </p>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <p>Experiencias reales de personas que han encontrado el regalo perfecto con nosotros</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-text">
+                        "¡Increíble servicio! Encontré el regalo perfecto para el aniversario de mis padres. Llegó a tiempo y la calidad superó mis expectativas."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ana M." class="author-img">
+                        <div class="author-info">
+                            <h4>Ana M.</h4>
+                            <p>Cliente satisfecha</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-up delay-1">
+                    <div class="testimonial-text">
+                        "No sabía qué regalar a mi esposa en nuestro aniversario. Gracias a su asesoramiento, acerté completamente. ¡Volveré a comprar!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Carlos R." class="author-img">
+                        <div class="author-info">
+                            <h4>Carlos R.</h4>
+                            <p>Cliente frecuente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-up delay-2">
+                    <div class="testimonial-text">
+                        "La personalización del regalo fue excepcional. Mi mejor amiga lloró de la emoción cuando lo recibió. ¡Gracias por hacer que este día sea especial!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Laura G." class="author-img">
+                        <div class="author-info">
+                            <h4>Laura G.</h4>
+                            <p>Cliente satisfecha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-</div>
+    <!-- CTA Section -->
+    <section class="cta-section" id="catalogo">
+        <div class="container">
+            <h2 class="fade-in-up">¿Listo para sorprender a alguien especial?</h2>
+            <p class="fade-in-up delay-1">Explora nuestra amplia selección de regalos y encuentra el ideal para esa persona especial.</p>
+            <a href="#contacto" class="cta-button secondary fade-in-up delay-2">Ver Catálogo Completo</a>
+        </div>
+    </section>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Mentalidad Transformadora. Todos los derechos reservados.</p>
-        <p>Por Katherine Castro. <a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
-    </div>
-</footer>
+    <!-- Contact Section -->
+    <section class="contact" id="contacto" style="padding: 100px 0; background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto;" class="fade-in-up">
+                <form id="contact-form" style="display: grid; gap: 20px;">
+                    <div style="display: grid; gap: 5px;">
+                        <label for="name" style="font-weight: 500;">Nombre completo</label>
+                        <input type="text" id="name" name="name" required 
+                               style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                    </div>
+                    <div style="display: grid; gap: 5px;">
+                        <label for="email" style="font-weight: 500;">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required
+                               style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                    </div>
+                    <div style="display: grid; gap: 5px;">
+                        <label for="message" style="font-weight: 500;">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required
+                                 style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" 
+                            style="background: var(--primary); color: white; border: none; padding: 15px; border-radius: 5px; font-size: 16px; font-weight: 500; cursor: pointer; transition: background 0.3s;">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RegalosEspeciales</h3>
+                    <p style="color: #bbb; margin-bottom: 20px;">Haciendo felices a las personas desde 2023 con regalos únicos y memorables.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Envíos y devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@regalosespeciales.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad, País</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RegalosEspeciales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to a server
+                alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+                contactForm.reset();
+            });
+        }
+
+        // Add animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Initial check for elements in viewport
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial state for animations
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            });
+            
+            // Trigger initial animation check
+            animateOnScroll();
+        });
+
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
 </body>
 </html>
